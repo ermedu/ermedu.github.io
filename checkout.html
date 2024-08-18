@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <title>Checkout - ERM Education</title>
+  <meta name="description"
+    content="Công ty du học ERM Education là đối tác uy tín trong tư vấn và hỗ trợ thủ tục visa đến Mỹ, Úc, Canada và Singapore. Cung cấp dịch vụ đặt vé máy bay, dịch thuật." />
+  <meta property="og:title" content="Checkout - ERM Education" />
+  <meta property="og:description"
+    content="Công ty du học ERM Education là đối tác uy tín trong tư vấn và hỗ trợ thủ tục visa đến Mỹ, Úc, Canada và Singapore. Cung cấp dịch vụ đặt vé máy bay, dịch thuật." />
+  <meta property="og:image"
+    content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/7e7c579f-a227-47e6-91f6-d54e24408e04/d1a523b3-54e0-4572-a2c3-cf5f0dff960a?org_if_sml=1&amp;force_format=original" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-size: 1.12rem;
+    }
+
+    body {
+      font-weight: 300;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.75;
+      color: var(--dl-color-gray-900);
+      background-color: var(--dl-color-gray-white);
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+  <link rel="shortcut icon" href="public/logo_32_32.png" type="icon/png" sizes="32x32" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="./style.css" />
+  <div>
+    <link href="./checkout.css" rel="stylesheet" />
+
+    <div class="checkout-container10">
+      <div class="checkout-hero">
+        <header-wrapper class="header-wrapper">
+          <!--Header component-->
+          <div data-role="Header" class="header-header">
+            <header data-thq="thq-navbar" class="header-navbar-interactive">
+              <a href="https://www.ermedu.com" class="header-link1">
+                <img alt="image" src="public/logo_long_300px-1500h.webp" class="header-image" />
+              </a>
+              <div data-thq="thq-navbar-nav" class="header-desktop-menu">
+                <nav class="header-links1">
+                  <a href="#payment" class="header-text TextSM">PAYMENT</a>
+                  <a href="#contact-us" class="header-link2 TextSM">
+                    CONTACT
+                  </a>
+                </nav>
+              </div>
+              <div data-thq="thq-burger-menu" class="header-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="header-icon1">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z">
+                  </path>
+                </svg>
+              </div>
+              <div data-thq="thq-mobile-menu" class="header-mobile-menu">
+                <div class="header-nav">
+                  <div class="header-top">
+                    <img alt="image" src="public/logo_long_300px-1500h.webp" class="header-logo" />
+                    <div data-thq="thq-close-menu" class="header-close-menu">
+                      <svg viewBox="0 0 1024 1024" class="header-icon3">
+                        <path
+                          d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <nav class="header-links2">
+                    <a href="#services" class="header-link3 TextSM">
+                      DỊCH VỤ
+                    </a>
+                    <a href="#contact-us" class="header-link4 TextSM">
+                      LIÊN HỆ
+                    </a>
+                  </nav>
+                </div>
+              </div>
+            </header>
+          </div>
+        </header-wrapper>
+      </div>
+      <div class="checkout-section2">
+        <div id="payment" class="checkout-container11">
+          <label-wrapper class="label-wrapper">
+            <!--Label component-->
+            <div class="label-container">
+              <h6 class="label-text"><span>Commissions payment</span></h6>
+            </div>
+          </label-wrapper>
+          <h2 class="checkout-text10 Text2XL">
+            <span>Scecina Memorial High School</span>
+            <br />
+          </h2>
+          <span id="payment-message" class="checkout-text13 TextXL">
+          </span>
+        </div>
+        <div id="checkout" class="checkout-container12"></div>
+      </div>
+      <div class="checkout-section3">
+        <div id="contact-us" class="checkout-container13">
+          <h2 class="checkout-text14">CONTACT INFORMATION</h2>
+          <span class="checkout-text15">
+            <span>
+              ERM Education looks forward to accompanying and bringing the best experience to our customers.
+            </span>
+            <br />
+          </span>
+        </div>
+        <div class="checkout-contact">
+          <div class="checkout-container14">
+            <div class="checkout-container15">
+              <div class="checkout-container16">
+                <svg viewBox="0 0 1024 1024" class="checkout-icon1">
+                  <path
+                    d="M938.667 426.667c0-117.803-47.787-224.555-124.971-301.696s-183.893-124.971-301.696-124.971-224.555 47.787-301.696 124.971-124.971 183.893-124.971 301.696c0 24.277 2.261 48.128 6.4 71.509 11.691 66.048 38.357 128.171 71.765 184.32 116.565 195.883 324.821 334.336 324.821 334.336 14.123 9.259 32.64 9.771 47.317 0 0 0 208.299-138.453 324.821-334.336 33.408-56.149 60.075-118.272 71.765-184.32 4.181-23.381 6.443-47.232 6.443-71.509zM853.333 426.667c0 18.944-1.749 37.845-5.077 56.661-9.429 53.333-31.445 105.728-61.099 155.563-83.285 139.947-220.416 249.643-275.157 290.091-54.784-40.448-191.872-150.144-275.157-290.091-29.653-49.835-51.669-102.229-61.099-155.563-3.328-18.816-5.077-37.717-5.077-56.661 0-94.251 38.144-179.541 99.968-241.365s147.115-99.968 241.365-99.968 179.541 38.144 241.365 99.968 99.968 147.115 99.968 241.365zM682.667 426.667c0-47.104-19.157-89.856-50.005-120.661s-73.557-50.005-120.661-50.005-89.856 19.157-120.661 50.005-50.005 73.557-50.005 120.661 19.157 89.856 50.005 120.661 73.557 50.005 120.661 50.005 89.856-19.157 120.661-50.005 50.005-73.557 50.005-120.661zM597.333 426.667c0 23.595-9.515 44.843-25.003 60.331s-36.736 25.003-60.331 25.003-44.843-9.515-60.331-25.003-25.003-36.736-25.003-60.331 9.515-44.843 25.003-60.331 36.736-25.003 60.331-25.003 44.843 9.515 60.331 25.003 25.003 36.736 25.003 60.331z">
+                  </path>
+                </svg>
+              </div>
+              <span class="checkout-text18">
+                89 Bàu Cát 1, Phường 14, Quận Tân Bình, TP. Hồ Chí Minh
+              </span>
+            </div>
+            <div class="checkout-container19">
+              <div class="checkout-container20">
+                <svg viewBox="0 0 1024 1024" class="checkout-icon5">
+                  <path
+                    d="M512 640q52 0 90-38t38-90-38-90-90-38-90 38-38 90 38 90 90 38zM512 86q176 0 301 125t125 301v62q0 64-43 108t-105 44q-78 0-126-64-64 64-152 64t-151-63-63-151 63-151 151-63 151 63 63 151v62q0 26 19 46t45 20 45-20 19-46v-62q0-140-101-241t-241-101-241 101-101 241 101 241 241 101h214v84h-214q-176 0-301-125t-125-301 125-301 301-125z">
+                  </path>
+                </svg>
+              </div>
+              <span class="checkout-text20">
+                <span>info@ermedu.com</span>
+                <br />
+              </span>
+            </div>
+          </div>
+          <div class="checkout-container21">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.223724645032!2d106.64090667495776!3d10.794169689355662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294d1b7c19b3%3A0x58ee10f4cda5b610!2zODkgQsOgdSBDw6F0IDEsIFBoxrDhu51uZyAxMywgVMOibiBCw6xuaCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2ssg!4v1710080458065!5m2!1sen!2ssg"
+              allowfullscreen="true" class="checkout-iframe"></iframe>
+          </div>
+        </div>
+        <img alt="image" src="public/gray-vector.svg" class="checkout-image" />
+      </div>
+      <footer-wrapper class="footer-wrapper">
+        <!--Footer component-->
+        <div class="footer-container">
+          <span class="footer-text TextSM">
+            Copyright © 2024 ERM Education
+          </span>
+        </div>
+      </footer-wrapper>
+    </div>
+  </div>
+  <script defer="" src="https://unpkg.com/@teleporthq/teleport-custom-scripts"></script>
+  <script src="checkout.js"></script>
+</body>
+
+</html>
