@@ -1,5 +1,5 @@
 // Initialize Stripe.js
-const stripe = Stripe('pk_test_51PT7DYP09gv5VJavLsiQYyzIEd7T6WOsdI9bj9H8ZCMtli5FKIahpKceclroaP6NcNjVMBwSliiKpnCCHxiqvLLz00jOWEgDrb');
+const stripe = Stripe('pk_live_51PT7DYP09gv5VJavLXSpBVv4cVlVFTqxTDtfrHUW6cj64RrRqJZ5p8FgUSqdu2ViSCcmvGQCGywgjM5Mc1OC080w00VFRAwP9a');
 const url = new URL(window.location.href);
 const session_id = url.searchParams.get("session_id");
 
