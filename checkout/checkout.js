@@ -2,11 +2,18 @@
 const stripe = Stripe('pk_live_51PT7DYP09gv5VJavLXSpBVv4cVlVFTqxTDtfrHUW6cj64RrRqJZ5p8FgUSqdu2ViSCcmvGQCGywgjM5Mc1OC080w00VFRAwP9a');
 const url = new URL(window.location.href);
 const session_id = url.searchParams.get("session_id");
+const payer_name = get_payer(url.pathname)
 
 start()
 
 function update_payment_message(new_message) {
   document.getElementById("payment-message").textContent = new_message;
+}
+
+function get_payer(pathname) {
+  const pathArray = pathname.split('/');
+  const lastSegment = pathArray[pathArray.length - 1];
+  return lastSegment.split('.')[0];
 }
 
 async function start() {
@@ -29,7 +36,13 @@ async function start() {
 async function checkout() {
   const fetchClientSecret = async () => {
     const response = await fetch("https://checkout-t41o.onrender.com/create-checkout-session", {
-      method: "POST"
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        payer: payer_name,
+      })
     });
     const { clientSecret } = await response.json();
     return clientSecret;
