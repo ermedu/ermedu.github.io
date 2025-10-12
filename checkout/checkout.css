@@ -32,7 +32,7 @@
 }
 
 .header-image {
-  width: 200px;
+  height: 48px;
   object-fit: cover;
   text-decoration: none;
 }
