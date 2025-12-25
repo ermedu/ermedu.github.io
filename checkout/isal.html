@@ -131,6 +131,8 @@
     data-tag="font" />
   <link rel="stylesheet" href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
   <script src="https://js.stripe.com/v3/"></script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAA0ethLDaOJ-cGLx-ZXHkRQKcV9hxRYOAN19NDZ1lbgNDYRyfhpew5yyQpqVxJu-mTqrp5PCxi4u0UepY&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 </head>
 
 <body>
@@ -205,9 +207,12 @@
           </span>
         </div>
         <div id="checkout" class="checkout-container12">
-          <a href="https://wise.com/pay/business/ermoverseasconsulting">
-            <img alt="image" src="../public/wise-quick-pay-qr-code.png">
-          </a>
+          <div id="paypal-container-67BSHCTVS9BE6" style="width: 445px;"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "67BSHCTVS9BE6",
+            }).render("#paypal-container-67BSHCTVS9BE6")
+          </script>
         </div>
       </div>
       <div class="checkout-section3">
